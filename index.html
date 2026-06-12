@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável</title>
+    <title>Agro Forte, Futuro Sustentável - Acessível</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="accessibility-bar" role="complementary" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-contrast" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">🌓 Alto Contraste</button>
+        <button id="btn-increase" title="Aumentar Texto" aria-label="Aumentar tamanho do texto">A+</button>
+        <button id="btn-decrease" title="Diminuir Texto" aria-label="Diminuir tamanho do texto">A-</button>
+    </div>
 
     <header>
         <div class="container">
@@ -36,7 +42,7 @@
             <div class="grid">
                 <div class="card">
                     <h3>Tecnologia Verde</h3>
-                    <p>Uso de drones, sensores e IA para otimizar o uso de água e insumos, reduzindo o impacto ambiental.</p>
+                    <p>Uso de drones, sensores e inteligência artificial para otimizar insumos, reduzindo o impacto ambiental.</p>
                 </div>
                 <div class="card">
                     <h3>Manejo Regenerativo</h3>
@@ -55,7 +61,7 @@
             <h2>Produzir e Preservar: O Grande Desafio</h2>
             <p>Acreditamos que a segurança alimentar do futuro depende das ações de hoje. Unir a força do agronegócio com o respeito às leis ambientais e a conservação dos ecossistemas não é apenas possível, é o único caminho para a longevidade do setor.</p>
             <button id="btnMensagem" class="btn-alt">Ver Compromisso</button>
-            <p id="mensagemOculta" class="hidden">"Garantir a produtividade de hoje sem comprometer as gerações de amanhã."</p>
+            <p id="mensagemOculta" class="hidden" aria-live="polite">"Garantir a produtividade de hoje sem comprometer as gerações de amanhã."</p>
         </div>
     </section>
 
@@ -63,9 +69,15 @@
         <div class="container">
             <h2>Junte-se ao Movimento</h2>
             <form id="formContato">
+                <label for="nome">Nome:</label>
                 <input type="text" id="nome" placeholder="Seu Nome" required>
+                
+                <label for="email">E-mail:</label>
                 <input type="email" id="email" placeholder="Seu E-mail" required>
+                
+                <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" placeholder="Sua Mensagem ou Sugestão" required></textarea>
+                
                 <button type="submit" class="btn">Enviar</button>
             </form>
         </div>
