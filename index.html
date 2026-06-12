@@ -3,88 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável - Acessível</title>
+    <title>Agro Forte | Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <div class="accessibility-bar" role="complementary" aria-label="Ferramentas de Acessibilidade">
-        <button id="btn-contrast" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">🌓 Alto Contraste</button>
-        <button id="btn-increase" title="Aumentar Texto" aria-label="Aumentar tamanho do texto">A+</button>
-        <button id="btn-decrease" title="Diminuir Texto" aria-label="Diminuir tamanho do texto">A-</button>
-    </div>
-
     <header>
-        <div class="container">
-            <div class="logo">Agro<span>Sustentável</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#pilares">Pilares</a></li>
-                    <li><a href="#sobre">Equilíbrio</a></li>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>Agro Sustentável</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#praticas">Práticas</a></li>
+                    <li><a href="#impacto">Impacto</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Agro Forte, Futuro Sustentável</h1>
-            <p>O equilíbrio perfeito entre a alta produtividade no campo e a preservação do meio ambiente.</p>
-            <a href="#pilares" class="btn">Saiba Mais</a>
-        </div>
-    </section>
-
-    <section id="pilares" class="features">
-        <div class="container">
-            <h2>Nossos Pilares de Atuação</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Tecnologia Verde</h3>
-                    <p>Uso de drones, sensores e inteligência artificial para otimizar insumos, reduzindo o impacto ambiental.</p>
-                </div>
-                <div class="card">
-                    <h3>Manejo Regenerativo</h3>
-                    <p>Práticas que recuperam a saúde do solo, promovem a biodiversidade e fixam carbono na terra.</p>
-                </div>
-                <div class="card">
-                    <h3>Energia Limpa</h3>
-                    <p>Implementação de fontes renováveis, como energia solar e biomassa, nas operações agrícolas.</p>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <section id="sobre" class="about">
-        <div class="container">
-            <h2>Produzir e Preservar: O Grande Desafio</h2>
-            <p>Acreditamos que a segurança alimentar do futuro depende das ações de hoje. Unir a força do agronegócio com o respeito às leis ambientais e a conservação dos ecossistemas não é apenas possível, é o único caminho para a longevidade do setor.</p>
-            <button id="btnMensagem" class="btn-alt">Ver Compromisso</button>
-            <p id="mensagemOculta" class="hidden" aria-live="polite">"Garantir a produtividade de hoje sem comprometer as gerações de amanhã."</p>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="animate-text">Agro Forte</h1>
+                <p class="animate-text-delay">Futuro Sustentável: O Equilíbrio Entre Produção e Meio Ambiente</p>
+                <button class="cta-button" onclick="scrollToSection('sobre')">
+                    Descubra Mais <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="85">0</span>
+                    <span class="stat-label">% Produção Sustentável</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="40">0</span>
+                    <span class="stat-label">Milhões ha Preservados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="30">0</span>
+                    <span class="stat-label">% Redução de Emissões</span>
+                </div>
+            </div>
+        </section>
 
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Junte-se ao Movimento</h2>
-            <form id="formContato">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" placeholder="Seu Nome" required>
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" placeholder="Seu E-mail" required>
-                
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" placeholder="Sua Mensagem ou Sugestão" required></textarea>
-                
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </div>
-    </section>
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2 class="section-title">Equilíbrio que Transforma</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>A agricultura sustentável é o caminho para alimentar o mundo sem comprometer as futuras gerações. No Brasil, temos o potencial de ser a maior potência agroambiental do planeta.</p>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <i class="fas fa-tractor"></i>
+                                <h3>Produção Eficiente</h3>
+                                <p>Tecnologia e inovação para produzir mais com menos recursos</p>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-tree"></i>
+                                <h3>Preservação Ambiental</h3>
+                                <p>Conservação de florestas e recursos hídricos</p>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Rentabilidade</h3>
+                                <p>Sustentabilidade econômica para o produtor rural</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Campo sustentável">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="praticas" class="practices">
+            <div class="container">
+                <h2 class="section-title">Práticas Sustentáveis</h2>
+                <div class="practices-grid">
+                    <div class="practice-item">
+                        <div class="practice-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Plantio Direto</h3>
+                        <p>Conservação do solo, redução da erosão e aumento da matéria orgânica</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="95"></div>
+                        </div>
+                        <span>Adoção: 95%</span>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Irrigação Inteligente</h3>
+                        <p>Economia de água com sistemas de precisão e monitoramento</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="78"></div>
+                        </div>
+                        <span>Economia: 78%</span>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h3>Energia Limpa</h3>
+                        <p>Utilização de energia solar e biogás nas propriedades</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="65"></div>
+                        </div>
+                        <span>Crescimento: 65%</span>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3>Integração Lavoura-Pecuária</h3>
+                        <p>Sistemas integrados que recuperam pastagens e sequestram carbono</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="82"></div>
+                        </div>
+                        <span>ILPF: 82%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impacto" class="impact">
+            <div class="container">
+                <h2 class="section-title">Nosso Impacto Positivo</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="500">0</div>
+                        <p>Milhões de toneladas de CO₂ sequestradas</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="200">0</div>
+                        <p>Mil hectares de floresta preservada</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="1500">0</div>
+                        <p>Comunidades beneficiadas</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="45">0</div>
+                        <p>% de economia de água</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container">
+                <h2 class="section-title">Junte-se a Nós</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Vamos construir juntos um futuro sustentável</h3>
+                        <p>Receba nossas novidades e dicas sobre agricultura sustentável</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" id="name" placeholder="Seu nome" required>
+                        <input type="email" id="email" placeholder="Seu e-mail" required>
+                        <textarea id="message" rows="4" placeholder="Sua mensagem"></textarea>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Agro Sustentável. Cultivando o futuro com equilíbrio.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-leaf"></i> Agro Sustentável</h4>
+                    <p>Produzindo alimentos, preservando o futuro</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#praticas">Práticas</a></li>
+                        <li><a href="#impacto">Impacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <div class="newsletter">
+                        <input type="email" id="newsEmail" placeholder="Seu e-mail">
+                        <button onclick="subscribeNewsletter()">Inscrever</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Agro Sustentável - Equilíbrio entre produção e meio ambiente</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
